@@ -31,6 +31,6 @@ https://colab.research.google.com/drive/1B-zlwMqUy-O12PVNcFo7wzPbZ7LqlnvB?usp=sh
 The app.py made using flask api is working perfectly and displays the generated sentence on local browser, but the index.html is not responding(needs some debugging)
 Although the index.html is running itself
 
-![alt text](https://ibb.co/m0NWQbX)
+![alt text](https://i.ibb.co/ZS2DyGY/image1.jpg[/img][/url])
 
 
