@@ -19,7 +19,7 @@ The code is made using python and displayed using streamlit, I have also provide
 
 ### To run the flask API use-
     pip install flask
-    pip install flask_cros
+    pip install flask-cors
 ###
     python app.py
 ###
