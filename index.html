@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentence Generation</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial, sans-serif;
+        }
+
+        #generate-btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #result {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Headline Generation</h1>
+    <button id="generate-btn">Generate Headlines for IITK</button>
+    <div id="result"></div>
+
+    <script>
+        document.getElementById("generate-btn").addEventListener("click", function() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "http://localhost:5000/hello", true);
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    var sentences = JSON.parse(xhr.responseText);
+                    displaySentences(sentences);
+                }
+            };
+            xhr.send();
+        });
+
+        function displaySentences(sentences) {
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
+            for (var i = 0; i < sentences.length; i++) {
+                var p = document.createElement("p");
+                p.innerText = sentences[i];
+                resultDiv.appendChild(p);
+            }
+        }
+    </script>
+</body>
+</html>
